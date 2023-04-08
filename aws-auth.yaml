@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::159550491320:role/eksctl-spot-cluster-nodegroup-spo-NodeInstanceRole-1P3JFDWI3YF2C
+      username: system:node:{{EC2PrivateDNSName}}
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2023-04-07T12:39:00Z"
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "1317"
+  uid: e212cdd4-11a3-465a-b74e-529a71d3ac08
